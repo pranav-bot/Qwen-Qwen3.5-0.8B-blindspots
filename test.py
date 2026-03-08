@@ -21,9 +21,9 @@ def generate_response(prompt):
         **model_inputs,
         max_new_tokens=512,
         do_sample=True,
-        temperature=0.7
+        temperature=0.7, 
     )
     return tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
 # Example test
-print(generate_response("Explain quantum entanglement to a five-year-old."))
+print(generate_response("Translate the Hindi idiom 'Ghar ki murgi dal barabar' to English. Does it mean the person is hungry?"))
